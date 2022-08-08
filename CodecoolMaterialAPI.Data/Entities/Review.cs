@@ -1,6 +1,6 @@
 ﻿namespace CodecoolMaterialsAPI.Data.Entities
 {
-    public class Review
+    public class EntitiesTypes
     {
         public int Id { get; set; }
         public int MaterialId { get; set; }
