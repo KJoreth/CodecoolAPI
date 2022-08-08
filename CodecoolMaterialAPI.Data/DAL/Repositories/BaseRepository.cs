@@ -15,5 +15,8 @@
 
         public async Task RemoveAsync(T entity)
             => await Task.Run(() => _context.Set<T>().Remove(entity));
+
+        public async Task UpdateAsync(T entity)
+            => await Task.Run(() => _context.Set<T>().Update(entity));
     }
 }

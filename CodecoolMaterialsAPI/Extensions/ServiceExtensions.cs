@@ -1,4 +1,6 @@
-﻿namespace CodecoolMaterialsAPI.Extensions
+﻿
+
+namespace CodecoolMaterialsAPI.Extensions
 {
     public static class ServiceExtensions
     {
@@ -26,6 +28,15 @@
             service.AddScoped<IAuthorServices, AuthorServices>();
             service.AddScoped<ITypeServices, TypeServices>();
             service.AddScoped<IReviewServices, ReviewServices>();
+        }
+
+        public static void AddJsonPatch(this IServiceCollection service)
+        {
+            service.AddControllers().AddNewtonsoftJson(s =>
+            {
+                s.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+                s.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+            });
         }
 
     }

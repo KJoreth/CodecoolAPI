@@ -20,5 +20,7 @@ namespace CodecoolMaterialsAPI.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<TypeDetailedDTO>> GetSingleByIdAsync(int id)
             => await _typeServices.GetSingleByIdAsync(id);
+
+        
     }
 }

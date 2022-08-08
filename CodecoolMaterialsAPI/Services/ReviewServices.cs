@@ -23,15 +23,27 @@
             return _mapper.Map<ReviewDetailedDTO>(review);
         }
 
-        public async Task<ReviewDetailedDTO> CreateNewAsync(ReviewCreateDTO model)
+        public async Task<ReviewDetailedDTO> CreateNewAsync(ReviewCreateUpdateDTO model)
         {
             if (!await _unitOfWork.MaterialRepository.AnyByIdAsync(model.MaterialId))
                 throw new ResourceNotFoundException($"Material with id: {model.MaterialId} doesn't exist");
-            Material material = await _unitOfWork.MaterialRepository.GetSingleWithAllFieldsByIdAsync(model.MaterialId);
-            Review review = new() { Points = model.Points, Text = model.Text, MaterialId = model.MaterialId};
+            Review review = _mapper.Map<Review>(model);
             await _unitOfWork.ReviewRepository.AddAsync(review);
             await _unitOfWork.CompleteUnitAsync();
             return _mapper.Map<ReviewDetailedDTO>(review);
+        }
+
+        public async Task UpdateAsync(int id, ReviewCreateUpdateDTO model)
+        {
+            if (!await _unitOfWork.ReviewRepository.AnyByIdAsync(id))
+                throw new ResourceNotFoundException($"Review with id: {id} doesn't exist");
+            if(!await _unitOfWork.MaterialRepository.AnyByIdAsync(model.MaterialId))
+                throw new ResourceNotFoundException($"Material with id: {model.MaterialId} doesn't exist");
+            Review review = await _unitOfWork.ReviewRepository.GetSingleByIdAsync(id);
+            review.MaterialId = model.MaterialId;
+            review.Text = model.Text;
+            review.Points = model.Points;
+            await _unitOfWork.CompleteUnitAsync();
         }
     }
 }

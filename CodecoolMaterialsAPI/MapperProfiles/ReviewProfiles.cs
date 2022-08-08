@@ -12,7 +12,7 @@ namespace CodecoolMaterialsAPI.MapperProfiles
             CreateMap<Review, ReviewDetailedDTO>()
                 .ForMember(dest => dest.Points,
                 opt => opt.MapFrom(src => $"{src.Points} / 10"));
-            CreateMap<ReviewCreateDTO, Review>();
+            CreateMap<ReviewCreateUpdateDTO, Review>().ReverseMap();
         }
     }
 }

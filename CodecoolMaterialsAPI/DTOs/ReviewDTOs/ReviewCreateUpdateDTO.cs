@@ -2,7 +2,7 @@
 
 namespace CodecoolMaterialsAPI.DTOs.ReviewDTOs
 {
-    public class ReviewCreateDTO
+    public class ReviewCreateUpdateDTO
     {
         [Required]
         [Range(1, 10)]

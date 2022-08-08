@@ -20,10 +20,17 @@ namespace CodecoolMaterialsAPI.Controllers
         public async Task<ActionResult<ReviewDetailedDTO>> GetSingleByIdAsync(int id)
             => await _reviewServices.GetSingleByIdAsync(id);
         [HttpPost]
-        public async Task<ActionResult<ReviewDetailedDTO>> CreateNewAsync(ReviewCreateDTO model)
+        public async Task<ActionResult<ReviewDetailedDTO>> CreateNewAsync(ReviewCreateUpdateDTO model)
         {
             ReviewDetailedDTO review = await _reviewServices.CreateNewAsync(model);
             return Created($"{Request.Scheme}://{Request.Host}{Request.Path}/{review.Id}", review);
         }
+        [HttpPatch("{id}")]
+        public async Task<ActionResult> UpdateAsync(int id, ReviewCreateUpdateDTO model)
+        {
+            await _reviewServices.UpdateAsync(id, model);
+            return NoContent();
+        }
+        
     }
 }

@@ -15,8 +15,8 @@
                 .FirstOrDefaultAsync();
         }
 
-        private async Task<bool> AnyByIdAsync(int id)
-            => await APIContext.Materials
+        public async Task<bool> AnyByIdAsync(int id)
+            => await APIContext.Reviews
             .Where(x => x.Id == id)
             .AnyAsync();
     }

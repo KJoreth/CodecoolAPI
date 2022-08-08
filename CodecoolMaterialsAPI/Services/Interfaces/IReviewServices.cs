@@ -2,8 +2,9 @@
 {
     public interface IReviewServices
     {
-        Task<ReviewDetailedDTO> CreateNewAsync(ReviewCreateDTO model);
+        Task<ReviewDetailedDTO> CreateNewAsync(ReviewCreateUpdateDTO model);
         Task<List<ReviewSimpleDTO>> GetAllAsync();
         Task<ReviewDetailedDTO> GetSingleByIdAsync(int id);
+        Task UpdateAsync(int id, ReviewCreateUpdateDTO model);
     }
 }

@@ -25,6 +25,9 @@ global using CodecoolMaterialsAPI.DTOs.AuthorDTOs;
 global using CodecoolMaterialsAPI.DTOs.Review;
 global using CodecoolMaterialsAPI.DTOs.TypeDTOs;
 global using CodecoolMaterialsAPI.DTOs.ReviewDTOs;
+global using Newtonsoft.Json;
+global using Newtonsoft.Json.Serialization;
+global using Microsoft.AspNetCore.JsonPatch;
 
 
 

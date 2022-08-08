@@ -7,6 +7,8 @@ builder.Services.AddDAL();
 builder.Services.AddDb(connectionString);
 builder.Services.AddMiddlewares();
 builder.Services.AddServices();
+builder.Services.AddJsonPatch();
+
 
 builder.Services.AddControllers();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
