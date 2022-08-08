@@ -1,12 +1,2 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CodecoolMaterialsAPI.Data.GlobalUsings
-{
-    internal class Usings
-    {
-    }
-}
+﻿global using Microsoft.EntityFrameworkCore;
+global using CodecoolMaterialsAPI.Data.Entities;
