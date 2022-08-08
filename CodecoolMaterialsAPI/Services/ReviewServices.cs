@@ -45,5 +45,14 @@
             review.Points = model.Points;
             await _unitOfWork.CompleteUnitAsync();
         }
+
+        public async Task DeleteAsync(int id)
+        {
+            if (!await _unitOfWork.ReviewRepository.AnyByIdAsync(id))
+                throw new ResourceNotFoundException($"Review with id: {id} doesn't exist");
+            Review review = await _unitOfWork.ReviewRepository.GetSingleByIdAsync(id);
+            await _unitOfWork.ReviewRepository.RemoveAsync(review);
+            await _unitOfWork.CompleteUnitAsync();
+        }
     }
 }

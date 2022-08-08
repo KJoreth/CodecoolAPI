@@ -31,6 +31,13 @@ namespace CodecoolMaterialsAPI.Controllers
             await _reviewServices.UpdateAsync(id, model);
             return NoContent();
         }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteAsync(int id)
+        {
+            await _reviewServices.DeleteAsync(id);
+            return NoContent();
+        }
         
     }
 }
