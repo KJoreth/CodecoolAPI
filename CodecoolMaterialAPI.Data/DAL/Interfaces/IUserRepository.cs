@@ -2,5 +2,6 @@
 {
     public interface IUserRepository : IRepository<User>
     {
+        APIContext APIContext { get; }
     }
 }

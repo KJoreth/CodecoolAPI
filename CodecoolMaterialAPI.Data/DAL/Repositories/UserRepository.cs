@@ -2,8 +2,8 @@
 {
     public class UserRepository : BaseRepository<User>, IUserRepository
     {
-        public UserRepository(DbContext context) : base(context) { }
+        public UserRepository(APIContext context) : base(context) { }
 
-
+        public APIContext APIContext => _context as APIContext;
     }
 }

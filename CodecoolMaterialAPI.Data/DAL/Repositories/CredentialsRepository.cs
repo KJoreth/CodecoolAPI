@@ -1,8 +1,10 @@
 ﻿namespace CodecoolMaterialsAPI.Data.DAL.Repositories
 {
-    internal class CredentialsRepository : BaseRepository<Credentials>, ICredentialsRepository
+    public class CredentialsRepository : BaseRepository<Credentials>, ICredentialsRepository
     {
-        public CredentialsRepository(DbContext context) : base(context) { }
+        public CredentialsRepository(APIContext context) : base(context) { }
+
+        public APIContext APIContext => _context as APIContext;
 
     }
 }

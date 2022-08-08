@@ -15,7 +15,7 @@ namespace CodecoolMaterialsAPI.Extensions
             service.AddScoped<ITypeRepository, TypeRepository>();
             service.AddScoped<IReviewRepository, ReviewRepository>();
             service.AddScoped<IUserRepository, UserRepository>();
-            service.AddScoped<ICredentialsRepository, ICredentialsRepository>();
+            service.AddScoped<ICredentialsRepository, CredentialsRepository>();
             service.AddScoped<IUnitOfWork, UnitOfWork>();
         }
 

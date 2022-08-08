@@ -2,5 +2,6 @@
 {
     public interface ICredentialsRepository : IRepository<Credentials>
     {
+        APIContext APIContext { get; }
     }
 }
