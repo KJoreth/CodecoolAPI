@@ -18,6 +18,13 @@ namespace CodecoolMaterialsAPI.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<MaterialDetailedDTO>> GetSingleByIdAsync(int id)
             => Ok(await _materialServices.GetSingleByIdAsync(id));
+        [HttpPost]
+        public async Task<ActionResult<MaterialCreatedDTO>> CreateNewAsync(MaterialCreateUpdateDTO model)
+        {
+            MaterialCreatedDTO material = await _materialServices.CreateNewAsync(model);
+            return Created($"{Request.Scheme}://{Request.Host}{Request.Path}/{material.Id}", material);
+        }
+
 
     }
 }

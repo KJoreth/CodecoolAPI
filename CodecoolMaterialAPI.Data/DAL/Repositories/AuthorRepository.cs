@@ -17,7 +17,7 @@
                 .FirstOrDefaultAsync();
         }
 
-        private async Task<bool> AnyByIdAsync(int id)
+        public async Task<bool> AnyByIdAsync(int id)
             => await APIContext.Authors
             .Where(x => x.Id == id)
             .AnyAsync();

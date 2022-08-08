@@ -25,5 +25,17 @@ namespace CodecoolMaterialsAPI.Services
             return _mapper.Map<MaterialDetailedDTO>(material);
         }
 
+        public async Task<MaterialCreatedDTO> CreateNewAsync(MaterialCreateUpdateDTO model)
+        {
+            if (!await _unitOfWork.AuthorRepository.AnyByIdAsync(model.AuthorId))
+                throw new ResourceNotFoundException($"Author id: {model.AuthorId} doesn't exist");
+            if (!await _unitOfWork.TypeRepository.AnyByIdAsync(model.TypeId))
+                throw new ResourceNotFoundException($"Type id: {model.TypeId} doesn't exist");
+            Material material = _mapper.Map<Material>(model);
+            await _unitOfWork.MaterialRepository.AddAsync(material);
+            await _unitOfWork.CompleteUnitAsync();
+            return _mapper.Map<MaterialCreatedDTO>(material);
+        }
+
     }
 }

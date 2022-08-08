@@ -11,6 +11,8 @@
                 opt => opt.MapFrom(src => src.PublishDate.ToString("dd-MMM-yyyy")))
                 .ForMember(dest => dest.Author,
                 opt => opt.MapFrom(src => src.Author.Name));
+            CreateMap<MaterialCreateUpdateDTO, Material>();
+            CreateMap<Material, MaterialCreatedDTO>();
         }
     }
 }

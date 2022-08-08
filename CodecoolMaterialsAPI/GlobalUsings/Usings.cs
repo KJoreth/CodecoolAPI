@@ -28,6 +28,7 @@ global using CodecoolMaterialsAPI.DTOs.ReviewDTOs;
 global using Newtonsoft.Json;
 global using Newtonsoft.Json.Serialization;
 global using Microsoft.AspNetCore.JsonPatch;
+global using System.ComponentModel.DataAnnotations;
 
 
 

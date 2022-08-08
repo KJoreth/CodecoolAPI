@@ -4,6 +4,7 @@
     {
         APIContext APIContext { get; }
 
+        Task<bool> AnyByIdAsync(int id);
         Task<Entities.MaterialType> GetSingleWithAllFieldsByIdAsync(int id);
     }
 }
