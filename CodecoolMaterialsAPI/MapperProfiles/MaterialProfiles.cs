@@ -12,7 +12,7 @@
                 .ForMember(dest => dest.Author,
                 opt => opt.MapFrom(src => src.Author.Name));
             CreateMap<MaterialCreateUpdateDTO, Material>();
-            CreateMap<Material, MaterialCreatedDTO>();
+            CreateMap<Material, MaterialCreatedDTO>().ReverseMap();
         }
     }
 }

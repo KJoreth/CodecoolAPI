@@ -24,6 +24,13 @@ namespace CodecoolMaterialsAPI.Controllers
             MaterialCreatedDTO material = await _materialServices.CreateNewAsync(model);
             return Created($"{Request.Scheme}://{Request.Host}{Request.Path}/{material.Id}", material);
         }
+        [HttpPut("{id}")]
+        public async Task<ActionResult> UpdateAsync(int id, MaterialCreateUpdateDTO model)
+        {
+            await _materialServices.UpdateAsync(id, model);
+            return NoContent();
+        }
+
 
 
     }

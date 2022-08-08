@@ -5,5 +5,6 @@
         Task<MaterialCreatedDTO> CreateNewAsync(MaterialCreateUpdateDTO model);
         Task<List<MaterialSimpleDTO>> GetAllAsync();
         Task<MaterialDetailedDTO> GetSingleByIdAsync(int id);
+        Task UpdateAsync(int id, MaterialCreateUpdateDTO model);
     }
 }
