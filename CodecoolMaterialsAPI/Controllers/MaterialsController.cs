@@ -13,6 +13,7 @@ namespace CodecoolMaterialsAPI.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<List<MaterialSimpleDTO>>> GetAllAsync()
             => Ok(await _materialServices.GetAllAsync());
 
