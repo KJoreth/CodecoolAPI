@@ -25,6 +25,7 @@
             service.AddScoped<IMaterialServices, MaterialServices>();
             service.AddScoped<IAuthorServices, AuthorServices>();
             service.AddScoped<ITypeServices, TypeServices>();
+            service.AddScoped<IReviewServices, ReviewServices>();
         }
 
     }
