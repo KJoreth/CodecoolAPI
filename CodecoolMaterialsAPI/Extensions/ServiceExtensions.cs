@@ -1,4 +1,7 @@
 ﻿
+
+
+
 namespace CodecoolMaterialsAPI.Extensions
 {
     public static class ServiceExtensions
@@ -9,6 +12,7 @@ namespace CodecoolMaterialsAPI.Extensions
             service.AddScoped<IMaterialRepository, MaterialRepository>();
             service.AddScoped<ITypeRepository, TypeRepository>();
             service.AddScoped<IReviewRepository, ReviewRepository>();
+            service.AddScoped<IUnitOfWork, UnitOfWork>();
         }
 
         public static void AddDb(this IServiceCollection service, string connectionString)
@@ -18,6 +22,11 @@ namespace CodecoolMaterialsAPI.Extensions
         {
             service.AddScoped<ErrorHandlingMiddleware>();
             service.AddScoped<LoggingMiddleware>();
+        }
+
+        public static void AddServices(this IServiceCollection service)
+        {
+            service.AddScoped<IMaterialServices, MaterialServices>();
         }
 
     }

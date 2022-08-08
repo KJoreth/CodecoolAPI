@@ -4,7 +4,7 @@
     {
         public static void SeedRevies(this ModelBuilder builder)
         {
-            List<EntitiesTypes> reviews = new List<EntitiesTypes>();
+            List<Review> reviews = new List<Review>();
             string[] fileLines = File.ReadAllLines("../CodecoolMaterialAPI.Data/Seeder/EntitiesSeeders/Data/Reviews.txt");
             foreach (string line in fileLines.Skip(1))
             {
@@ -12,17 +12,17 @@
                 reviews.Add(item);
             }
 
-            builder.Entity<EntitiesTypes>().HasData(reviews);
+            builder.Entity<Review>().HasData(reviews);
         }
 
-        private static EntitiesTypes GetItemFromLine(string line)
+        private static Review GetItemFromLine(string line)
         {
             string[] item = line.Split('|');
             int id = Convert.ToInt32(item[0]);
             int materialId = Convert.ToInt32(item[1]);
             string text = item[2];
             int points = Convert.ToInt32(item[3]);
-            return new EntitiesTypes() { Id = id, MaterialId = materialId, Text = text, Points = points };
+            return new Review() { Id = id, MaterialId = materialId, Text = text, Points = points };
         }
     }
 }

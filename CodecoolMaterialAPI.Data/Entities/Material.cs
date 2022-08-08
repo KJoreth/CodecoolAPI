@@ -11,7 +11,7 @@
         
         public int TypeId { get; set; }
         public Type Type { get; set; }
-        public List<EntitiesTypes> Reviews { get; set; } = new List<EntitiesTypes>();
+        public List<Review> Reviews { get; set; } = new List<Review>();
 
     }
 }

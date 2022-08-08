@@ -9,7 +9,7 @@ namespace CodecoolMaterialsAPI.Data.Context
         public DbSet<Author> Authors { get; set; }
         public DbSet<Material> Materials { get; set; }
         public DbSet<Entities.Type> Types { get; set; }
-        public DbSet<EntitiesTypes> Reviews { get; set; }
+        public DbSet<Review> Reviews { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
             => modelBuilder.SeedDB();

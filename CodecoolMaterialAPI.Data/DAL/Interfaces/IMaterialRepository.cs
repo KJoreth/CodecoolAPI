@@ -1,6 +1,6 @@
 ﻿namespace CodecoolMaterialsAPI.Data.DAL.Interfaces
 {
-    public interface IMaterialRepository
+    public interface IMaterialRepository : IRepository<Material>
     {
         APIContext APIContext { get; }
     }

@@ -61,3 +61,5 @@ C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialsAPI\obj\Debug\net6.0\CodecoolM
 C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialsAPI\obj\Debug\net6.0\ref\CodecoolMaterialsAPI.dll
 C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialsAPI\bin\Debug\net6.0\Humanizer.dll
 C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialsAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialsAPI\bin\Debug\net6.0\AutoMapper.dll
+C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialsAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

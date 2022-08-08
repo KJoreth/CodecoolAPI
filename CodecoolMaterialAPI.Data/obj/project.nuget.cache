@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "tov+7IbM4nhcmKcTsmcHCHp5kHKH0bOkD2XRl0s82B4l2fVCjr4+K/QwrlBckmc273TlC2ebdoHD7+ihKIDaTw==",
+  "dgSpecHash": "iZ+9YBGcDEZGx9BgkLisoequfZcAqUYRa81AxNj7mXuxUf1mP6tJHifL82Ks6CxFEeZtkT8lfaGiEWEhtR4laA==",
   "success": true,
   "projectFilePath": "C:\\Projects\\CodecoolMaterialsAPI\\CodecoolMaterialAPI.Data\\CodecoolMaterialsAPI.Data.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\PDBJ84\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\PDBJ84\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\PDBJ84\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Users\\PDBJ84\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\PDBJ84\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\PDBJ84\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\PDBJ84\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\PDBJ84\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.7\\microsoft.entityframeworkcore.6.0.7.nupkg.sha512",
