@@ -6,6 +6,8 @@
         IMaterialRepository MaterialRepository { get; }
         ITypeRepository TypeRepository { get; }
         IReviewRepository ReviewRepository { get; }
+        IUserRepository UserRepository { get; }
+        ICredentialsRepository CredentialsRepository { get; }
 
         Task<int> CompleteUnitAsync();
     }

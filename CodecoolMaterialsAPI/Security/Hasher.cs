@@ -1,7 +1,7 @@
 ﻿
 namespace CodecoolMaterialsAPI.Security
 {
-    public class Hasher
+    public static class Hasher
     {
         public static string ComputeSha256Hash(string rawData)
         {

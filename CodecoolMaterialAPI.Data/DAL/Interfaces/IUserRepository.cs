@@ -3,5 +3,7 @@
     public interface IUserRepository : IRepository<User>
     {
         APIContext APIContext { get; }
+
+        Task<User> GetUserByCredentialsAsync(string hashedLogin, string hashedPassword);
     }
 }
