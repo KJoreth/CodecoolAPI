@@ -1,5 +1,4 @@
-﻿
-namespace CodecoolMaterialsAPI.Data.DAL
+﻿namespace CodecoolMaterialsAPI.Data.DAL.Repositories
 {
     public abstract class BaseRepository<T> : IRepository<T> where T : class
     {

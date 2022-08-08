@@ -1,5 +1,4 @@
-﻿
-namespace CodecoolMaterialsAPI.Data.DAL
+﻿namespace CodecoolMaterialsAPI.Data.DAL.Repositories
 {
     public class AuthorRepository : BaseRepository<Author>, IAuthorRepository
     {

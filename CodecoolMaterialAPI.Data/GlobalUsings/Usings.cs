@@ -2,3 +2,4 @@
 global using CodecoolMaterialsAPI.Data.Entities;
 global using CodecoolMaterialsAPI.Data.DAL.Interfaces;
 global using CodecoolMaterialsAPI.Data.Context;
+global using CodecoolMaterialsAPI.Data.DAL;
