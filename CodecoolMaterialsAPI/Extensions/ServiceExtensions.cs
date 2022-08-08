@@ -39,5 +39,23 @@ namespace CodecoolMaterialsAPI.Extensions
             });
         }
 
+        public static void AddJWTBearer(this IServiceCollection service, string JWTAudience, string JWTIssuer, string JWTKey)
+        {
+            service.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+            {
+                options.RequireHttpsMetadata = false;
+                options.SaveToken = true;
+                options.TokenValidationParameters = new TokenValidationParameters()
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidAudience = JWTAudience,
+                    ValidIssuer = JWTIssuer,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JWTKey)),
+                    ClockSkew = TimeSpan.Zero
+                };
+            });
+        }
+
     }
 }

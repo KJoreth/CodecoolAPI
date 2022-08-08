@@ -1,4 +1,6 @@
 
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -8,6 +10,12 @@ builder.Services.AddDb(connectionString);
 builder.Services.AddMiddlewares();
 builder.Services.AddServices();
 builder.Services.AddJsonPatch();
+
+var audience = builder.Configuration["Jwt:Audience"];
+var issuer = builder.Configuration["Jwt:Issuer"] ;
+var key = (builder.Configuration["Jwt:Key"]);
+builder.Services.AddJWTBearer(audience, issuer, key);
+
 
 
 builder.Services.AddControllers();

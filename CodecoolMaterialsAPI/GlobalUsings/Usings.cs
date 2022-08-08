@@ -29,6 +29,8 @@ global using Newtonsoft.Json;
 global using Newtonsoft.Json.Serialization;
 global using Microsoft.AspNetCore.JsonPatch;
 global using System.ComponentModel.DataAnnotations;
-
+global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using Microsoft.IdentityModel.Tokens;
+global using System.Text;
 
 
