@@ -5,7 +5,8 @@ namespace CodecoolMaterialsAPI.MapperProfiles
     {
         public TypeProfiles()
         {
-            CreateMap<Data.Entities.Type, TypeSimpleDTO>();
+            CreateMap<MaterialType, TypeSimpleDTO>();
+            CreateMap<MaterialType, TypeDetailedDTO>();
         }
     }
 }

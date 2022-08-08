@@ -11,10 +11,17 @@
             _mapper = mapper;
         }
 
-        public async Task<ActionResult<List<TypeSimpleDTO>>> GetAllAsync()
+        public async Task<List<TypeSimpleDTO>> GetAllAsync()
         {
-            List<Data.Entities.Type> types = await _unitOfWork.TypeRepository.GetAllAsync();
+            List<MaterialType> types = await _unitOfWork.TypeRepository.GetAllAsync();
             return _mapper.Map<List<TypeSimpleDTO>>(types);
         }
+
+        public async Task<TypeDetailedDTO> GetSingleByIdAsync(int id)
+        {
+            MaterialType type = await _unitOfWork.TypeRepository.GetSingleWithAllFieldsByIdAsync(id);
+            return _mapper.Map<TypeDetailedDTO>(type);
+        }
+
     }
 }

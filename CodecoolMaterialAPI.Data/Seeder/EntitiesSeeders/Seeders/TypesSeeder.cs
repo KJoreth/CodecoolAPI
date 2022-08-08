@@ -4,7 +4,7 @@
     {
         public static void SeedTypes(this ModelBuilder builder)
         {
-            List<Entities.Type> types = new List<Entities.Type>();
+            List<Entities.MaterialType> types = new List<Entities.MaterialType>();
             string[] fileLines = File.ReadAllLines("../CodecoolMaterialAPI.Data/Seeder/EntitiesSeeders/Data/Types.txt");
             foreach (string line in fileLines.Skip(1))
             {
@@ -12,16 +12,16 @@
                 types.Add(item);
             }
 
-            builder.Entity<Entities.Type>().HasData(types);
+            builder.Entity<Entities.MaterialType>().HasData(types);
         }
 
-        private static Entities.Type GetItemFromLine(string line)
+        private static Entities.MaterialType GetItemFromLine(string line)
         {
             string[] item = line.Split('|');
             int id = Convert.ToInt32(item[0]);
             string name = item[1];
             string definition = item[2];
-            return new Entities.Type() { Id = id, Name = name, Definition = definition };
+            return new Entities.MaterialType() { Id = id, Name = name, Definition = definition };
         }
     }
 }

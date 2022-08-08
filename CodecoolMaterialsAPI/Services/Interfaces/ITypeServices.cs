@@ -2,6 +2,7 @@
 {
     public interface ITypeServices
     {
-        Task<ActionResult<List<TypeSimpleDTO>>> GetAllAsync();
+        Task<List<TypeSimpleDTO>> GetAllAsync();
+        Task<TypeDetailedDTO> GetSingleByIdAsync(int id);
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace CodecoolMaterialsAPI.Data.Entities
 {
-    public class Type
+    public class MaterialType
     {
         public int Id { get; set; }
         public string Name { get; set; }
