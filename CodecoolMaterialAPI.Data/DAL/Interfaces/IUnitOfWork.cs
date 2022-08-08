@@ -4,7 +4,7 @@
     {
         IAuthorRepository AuthorRepository { get; }
         IMaterialRepository MaterialRepository { get; }
-        ITypeRepository MaterialTypeRepository { get; }
+        ITypeRepository TypeRepository { get; }
         IReviewRepository ReviewRepository { get; }
 
         Task<int> CompleteUnitAsync();

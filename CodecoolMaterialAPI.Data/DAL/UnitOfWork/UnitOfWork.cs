@@ -10,13 +10,13 @@ namespace CodecoolMaterialsAPI.Data.UnitOfWork
             _context = context;
             AuthorRepository = authorRepository;
             MaterialRepository = materialRepository;
-            MaterialTypeRepository = materialTypeRepository;
+            TypeRepository = materialTypeRepository;
             ReviewRepository = reviewRepository;
         }
 
         public IAuthorRepository AuthorRepository { get; private set; }
         public IMaterialRepository MaterialRepository { get; private set; }
-        public ITypeRepository MaterialTypeRepository { get; private set; }
+        public ITypeRepository TypeRepository { get; private set; }
         public IReviewRepository ReviewRepository { get; private set; }
 
         public async Task<int> CompleteUnitAsync()
