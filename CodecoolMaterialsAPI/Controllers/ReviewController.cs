@@ -25,7 +25,7 @@ namespace CodecoolMaterialsAPI.Controllers
             ReviewDetailedDTO review = await _reviewServices.CreateNewAsync(model);
             return Created($"{Request.Scheme}://{Request.Host}{Request.Path}/{review.Id}", review);
         }
-        [HttpPatch("{id}")]
+        [HttpPut("{id}")]
         public async Task<ActionResult> UpdateAsync(int id, ReviewCreateUpdateDTO model)
         {
             await _reviewServices.UpdateAsync(id, model);

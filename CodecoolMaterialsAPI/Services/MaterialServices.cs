@@ -50,5 +50,14 @@ namespace CodecoolMaterialsAPI.Services
             await _unitOfWork.CompleteUnitAsync();
         }
 
+        public async Task DeleteAsync(int id)
+        {
+            if (!await _unitOfWork.MaterialRepository.AnyByIdAsync(id))
+                throw new ResourceNotFoundException($"Material id: {id} doesn't exist");
+            Material material = await _unitOfWork.MaterialRepository.GetSingleWithAllFieldsByIdAsync(id);
+            await _unitOfWork.MaterialRepository.RemoveAsync(material);
+            await _unitOfWork.CompleteUnitAsync();
+        }
+
     }
 }
