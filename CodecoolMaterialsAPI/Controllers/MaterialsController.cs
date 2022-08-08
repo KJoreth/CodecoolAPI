@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
 
-
 namespace CodecoolMaterialsAPI.Controllers
 {
     [Route("api/[controller]")]
@@ -15,6 +14,10 @@ namespace CodecoolMaterialsAPI.Controllers
 
         [HttpGet]
         public async Task<ActionResult<List<MaterialSimpleDTO>>> GetAllAsync()
-            => await _materialServices.GetAllAsync();
+            => Ok(await _materialServices.GetAllAsync());
+        [HttpGet("{id}")]
+        public async Task<ActionResult<MaterialDetailedDTO>> GetSingleByIdAsync(int id)
+            => Ok(await _materialServices.GetSingleByIdAsync(id));
+
     }
 }

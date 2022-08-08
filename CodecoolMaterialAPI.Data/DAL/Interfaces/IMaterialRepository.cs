@@ -3,5 +3,7 @@
     public interface IMaterialRepository : IRepository<Material>
     {
         APIContext APIContext { get; }
+
+        Task<Material> GetSingleWithAllFieldsByIdAsync(int id);
     }
 }

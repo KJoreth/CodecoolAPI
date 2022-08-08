@@ -2,6 +2,7 @@
 
 
 
+
 namespace CodecoolMaterialsAPI.Extensions
 {
     public static class ServiceExtensions
@@ -27,6 +28,7 @@ namespace CodecoolMaterialsAPI.Extensions
         public static void AddServices(this IServiceCollection service)
         {
             service.AddScoped<IMaterialServices, MaterialServices>();
+            service.AddScoped<IAuthorServices, AuthorServices>();
         }
 
     }

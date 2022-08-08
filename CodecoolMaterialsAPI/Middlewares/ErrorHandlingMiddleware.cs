@@ -1,4 +1,8 @@
 ﻿
+
+
+using Microsoft.AspNetCore.Http;
+
 namespace CodecoolMaterialsAPI.Middlewares
 {
     public class ErrorHandlingMiddleware : IMiddleware
@@ -19,19 +23,20 @@ namespace CodecoolMaterialsAPI.Middlewares
             {
                 _logger.LogError(e, e.Message);
                 context.Response.StatusCode = 404;
-                await context.Response.WriteAsync(e.Message);
+                await context.Response.WriteAsJsonAsync(new { Error = e.Message });
+
             }
             catch (RecordAlreadyExists e)
             {
                 _logger.LogError(e, e.Message);
                 context.Response.StatusCode = 409;
-                await context.Response.WriteAsync(e.Message);
+                await context.Response.WriteAsJsonAsync(new { Error = e.Message });
             }
             catch (Exception e)
             {
                 _logger.LogError(e, e.Message);
                 context.Response.StatusCode = 500;
-                await context.Response.WriteAsync("Something went wrong.");
+                await context.Response.WriteAsJsonAsync(new { Error = "Something went wrong" });
             }
 
         }

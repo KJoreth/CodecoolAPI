@@ -19,5 +19,11 @@ namespace CodecoolMaterialsAPI.Services
             return _mapper.Map<List<MaterialSimpleDTO>>(materials);
         }
 
+        public async Task<MaterialDetailedDTO> GetSingleByIdAsync(int id)
+        {
+            Material material = await _unitOfWork.MaterialRepository.GetSingleWithAllFieldsByIdAsync(id);
+            return _mapper.Map<MaterialDetailedDTO>(material);
+        }
+
     }
 }

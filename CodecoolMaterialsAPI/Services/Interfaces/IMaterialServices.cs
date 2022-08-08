@@ -3,5 +3,6 @@
     public interface IMaterialServices
     {
         Task<List<MaterialSimpleDTO>> GetAllAsync();
+        Task<MaterialDetailedDTO> GetSingleByIdAsync(int id);
     }
 }
