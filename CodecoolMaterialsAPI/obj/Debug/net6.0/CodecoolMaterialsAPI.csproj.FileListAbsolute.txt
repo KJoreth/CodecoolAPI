@@ -69,3 +69,6 @@ C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialsAPI\bin\Debug\net6.0\Newtonsof
 C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialsAPI\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
 C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialsAPI\bin\Debug\net6.0\System.Net.Http.Formatting.dll
 C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialsAPI\bin\Debug\net6.0\System.Web.Http.dll
+C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialsAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialsAPI\bin\Debug\net6.0\CodecoolMaterialsAPI.xml
+C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialsAPI\obj\Debug\net6.0\CodecoolMaterialsAPI.xml

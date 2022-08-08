@@ -16,7 +16,7 @@ var issuer = builder.Configuration["Jwt:Issuer"] ;
 var key = (builder.Configuration["Jwt:Key"]);
 builder.Services.AddJWTBearer(audience, issuer, key);
 
-
+builder.Services.AddSwaggerGenWithJWTSupport();
 
 builder.Services.AddControllers();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

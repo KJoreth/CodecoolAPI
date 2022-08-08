@@ -7,4 +7,5 @@ global using CodecoolMaterialsAPI.Data.Seeder.EntitiesSeeders.Seeders;
 global using CodecoolMaterialsAPI.Data.Seeder;
 global using System;
 global using CodecoolMaterialsAPI.Data.Exceptions;
+global using CodecoolMaterialsAPI.Data.Entities.Enums;
 
