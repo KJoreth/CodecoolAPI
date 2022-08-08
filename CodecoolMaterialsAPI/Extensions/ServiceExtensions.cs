@@ -1,4 +1,5 @@
-﻿namespace CodecoolMaterialsAPI.Extensions
+﻿
+namespace CodecoolMaterialsAPI.Extensions
 {
     public static class ServiceExtensions
     {
@@ -12,6 +13,12 @@
 
         public static void AddDb(this IServiceCollection service, string connectionString)
             => service.AddDbContext<APIContext>(options => options.UseSqlServer(connectionString));
+
+        public static void AddMiddlewares(this IServiceCollection service)
+        {
+            service.AddScoped<ErrorHandlingMiddleware>();
+            service.AddScoped<LoggingMiddleware>();
+        }
 
     }
 }

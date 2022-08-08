@@ -4,6 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDAL();
 builder.Services.AddDb(connectionString);
+builder.Services.AddMiddlewares();
 
 
 builder.Services.AddControllers();
