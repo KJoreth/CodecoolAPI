@@ -21,5 +21,9 @@ namespace CodecoolMaterialsAPI.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<AuthorDetailedDTO>> GetSingleByIdAsync(int id)
             => await _authorServices.GetSingleByIdAsync(id);
+
+        [HttpGet("{id}/Verified")]
+        public async Task<ActionResult<List<MaterialSimpleDTO>>> GetAllVerifiedMaterialsFromAuthor(int id)
+            => Ok(await _authorServices.GetAllVerifiedMaterialsFromAuthor(id));
     }
 }

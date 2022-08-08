@@ -21,5 +21,18 @@
             Author author = await _unitOfWork.AuthorRepository.GetSingleWithAllFieldsByIdAsync(id);
             return _mapper.Map<AuthorDetailedDTO>(author);
         }
+
+        public async Task<List<MaterialSimpleDTO>> GetAllVerifiedMaterialsFromAuthor(int id)
+        {
+            if (!await _unitOfWork.AuthorRepository.AnyByIdAsync(id))
+                throw new ResourceNotFoundException($"Author id: {id} doesn't exist");
+            Author author =await _unitOfWork.AuthorRepository.GetSingleWithAllFieldsAndReviewsByIdAsync(id);
+            List<Material> verifiedMaterials = new List<Material>();
+            foreach(var material in author.Materials)
+                if(material.AverageScore > 5)
+                    verifiedMaterials.Add(material);
+
+            return _mapper.Map<List<MaterialSimpleDTO>>(verifiedMaterials);
+        }
     }
 }

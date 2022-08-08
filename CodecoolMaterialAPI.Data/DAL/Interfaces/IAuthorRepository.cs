@@ -5,6 +5,7 @@
         APIContext APIContext { get; }
 
         Task<bool> AnyByIdAsync(int id);
+        Task<Author> GetSingleWithAllFieldsAndReviewsByIdAsync(int id);
         Task<Author> GetSingleWithAllFieldsByIdAsync(int id);
     }
 }

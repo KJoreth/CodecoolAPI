@@ -17,6 +17,18 @@
                 .FirstOrDefaultAsync();
         }
 
+        public async Task<Author> GetSingleWithAllFieldsAndReviewsByIdAsync(int id)
+        {
+            if (!await AnyByIdAsync(id))
+                throw new ResourceNotFoundException($"Author with id: {id} was not found");
+
+            return await APIContext.Authors
+                .Where(x => x.Id == id)
+                .Include(x => x.Materials)
+                .ThenInclude(x => x.Reviews)
+                .FirstOrDefaultAsync();
+        }
+
         public async Task<bool> AnyByIdAsync(int id)
             => await APIContext.Authors
             .Where(x => x.Id == id)
