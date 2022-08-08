@@ -19,5 +19,11 @@ namespace CodecoolMaterialsAPI.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<ReviewDetailedDTO>> GetSingleByIdAsync(int id)
             => await _reviewServices.GetSingleByIdAsync(id);
+        [HttpPost]
+        public async Task<ActionResult<ReviewDetailedDTO>> CreateNewAsync(ReviewCreateDTO model)
+        {
+            ReviewDetailedDTO review = await _reviewServices.CreateNewAsync(model);
+            return Created($"{Request.Scheme}://{Request.Host}{Request.Path}/{review.Id}", review);
+        }
     }
 }

@@ -4,6 +4,8 @@
     {
         APIContext APIContext { get; }
 
+        Task<bool> AnyByIdAsync(int id);
+        Task<Material> GetSingleAsNoTrackingByIdAsync(int id);
         Task<Material> GetSingleWithAllFieldsByIdAsync(int id);
     }
 }

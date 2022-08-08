@@ -19,7 +19,18 @@ namespace CodecoolMaterialsAPI.Data.DAL.Repositories
                 .FirstOrDefaultAsync();
         }
 
-        private async Task<bool> AnyByIdAsync(int id)
+        public async Task<Material> GetSingleAsNoTrackingByIdAsync(int id)
+        {
+            if (!await AnyByIdAsync(id))
+                throw new ResourceNotFoundException($"Material with id: {id} was not found");
+
+            return await APIContext.Materials
+                .Where(x => x.Id == id)
+                .AsNoTracking()
+                .FirstOrDefaultAsync();
+        }
+
+        public async Task<bool> AnyByIdAsync(int id)
             => await APIContext.Materials
             .Where(x => x.Id == id)
             .AnyAsync();
