@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodecoolMaterialsAPI", "CodecoolMaterialsAPI\CodecoolMaterialsAPI.csproj", "{38334E39-87E9-4E28-BB91-D2E43EE72184}"
+	ProjectSection(ProjectDependencies) = postProject
+		{981D04D0-E8F2-40A8-A5D6-CBA7FB89F1D4} = {981D04D0-E8F2-40A8-A5D6-CBA7FB89F1D4}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodecoolMaterialsAPI.Data", "CodecoolMaterialAPI.Data\CodecoolMaterialsAPI.Data.csproj", "{981D04D0-E8F2-40A8-A5D6-CBA7FB89F1D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +20,10 @@ Global
 		{38334E39-87E9-4E28-BB91-D2E43EE72184}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38334E39-87E9-4E28-BB91-D2E43EE72184}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38334E39-87E9-4E28-BB91-D2E43EE72184}.Release|Any CPU.Build.0 = Release|Any CPU
+		{981D04D0-E8F2-40A8-A5D6-CBA7FB89F1D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{981D04D0-E8F2-40A8-A5D6-CBA7FB89F1D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{981D04D0-E8F2-40A8-A5D6-CBA7FB89F1D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{981D04D0-E8F2-40A8-A5D6-CBA7FB89F1D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

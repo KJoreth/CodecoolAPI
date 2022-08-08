@@ -1,4 +1,4 @@
-﻿namespace CodecoolMaterialsAPI.Data.DAL
+﻿namespace CodecoolMaterialsAPI.Data.DAL.Repositories
 {
     public class MaterialRepository : BaseRepository<Material>, IMaterialRepository
     {

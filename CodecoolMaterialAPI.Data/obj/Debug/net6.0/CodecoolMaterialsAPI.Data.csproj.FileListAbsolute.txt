@@ -1,0 +1,14 @@
+C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialAPI.Data\bin\Debug\net6.0\CodecoolMaterialsAPI.Data.deps.json
+C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialAPI.Data\bin\Debug\net6.0\CodecoolMaterialsAPI.Data.runtimeconfig.json
+C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialAPI.Data\bin\Debug\net6.0\CodecoolMaterialsAPI.Data.dll
+C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialAPI.Data\bin\Debug\net6.0\CodecoolMaterialsAPI.Data.pdb
+C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialAPI.Data\obj\Debug\net6.0\CodecoolMaterialsAPI.Data.csproj.AssemblyReference.cache
+C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialAPI.Data\obj\Debug\net6.0\CodecoolMaterialsAPI.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialAPI.Data\obj\Debug\net6.0\CodecoolMaterialsAPI.Data.AssemblyInfoInputs.cache
+C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialAPI.Data\obj\Debug\net6.0\CodecoolMaterialsAPI.Data.AssemblyInfo.cs
+C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialAPI.Data\obj\Debug\net6.0\CodecoolMaterialsAPI.Data.csproj.CoreCompileInputs.cache
+C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialAPI.Data\obj\Debug\net6.0\CodecoolMaterialsAPI.Data.dll
+C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialAPI.Data\obj\Debug\net6.0\refint\CodecoolMaterialsAPI.Data.dll
+C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialAPI.Data\obj\Debug\net6.0\CodecoolMaterialsAPI.Data.pdb
+C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialAPI.Data\obj\Debug\net6.0\CodecoolMaterialsAPI.Data.genruntimeconfig.cache
+C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialAPI.Data\obj\Debug\net6.0\ref\CodecoolMaterialsAPI.Data.dll

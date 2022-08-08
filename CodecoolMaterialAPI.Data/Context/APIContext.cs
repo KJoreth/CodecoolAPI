@@ -2,9 +2,12 @@
 {
     public class APIContext : DbContext
     {
+        public APIContext(DbContextOptions<APIContext> options)
+            : base(options) { }
+
         public DbSet<Author> Authors { get; set; }
         public DbSet<Material> Materials { get; set; }
-        public DbSet<MaterialType> MaterialTypes { get; set; }
+        public DbSet<Entities.Type> Types { get; set; }
         public DbSet<Review> Reviews { get; set; }
     }
 }

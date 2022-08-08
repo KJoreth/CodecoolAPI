@@ -9,8 +9,8 @@
         public int AuthorId { get; set; }
         public Author Author { get; set; }
         
-        public int MaterialTypeId { get; set; }
-        public MaterialType MaterialType { get; set; }
+        public int TypeId { get; set; }
+        public Type Type { get; set; }
         public List<Review> Reviews { get; set; } = new List<Review>();
 
     }

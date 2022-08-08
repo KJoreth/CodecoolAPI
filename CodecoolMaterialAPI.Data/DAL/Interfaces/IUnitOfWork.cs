@@ -1,10 +1,10 @@
-﻿namespace CodecoolMaterialsAPI.Data.UnitOfWork
+﻿namespace CodecoolMaterialsAPI.Data.DAL.Interfaces
 {
     public interface IUnitOfWork
     {
         IAuthorRepository AuthorRepository { get; }
         IMaterialRepository MaterialRepository { get; }
-        IMaterialTypeRepository MaterialTypeRepository { get; }
+        ITypeRepository MaterialTypeRepository { get; }
         IReviewRepository ReviewRepository { get; }
 
         Task<int> CompleteUnitAsync();

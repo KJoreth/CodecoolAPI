@@ -5,7 +5,7 @@ namespace CodecoolMaterialsAPI.Data.UnitOfWork
     {
         private readonly APIContext _context;
         public UnitOfWork(APIContext context, IAuthorRepository authorRepository, IMaterialRepository materialRepository,
-            IMaterialTypeRepository materialTypeRepository, IReviewRepository reviewRepository)
+            ITypeRepository materialTypeRepository, IReviewRepository reviewRepository)
         {
             _context = context;
             AuthorRepository = authorRepository;
@@ -16,7 +16,7 @@ namespace CodecoolMaterialsAPI.Data.UnitOfWork
 
         public IAuthorRepository AuthorRepository { get; private set; }
         public IMaterialRepository MaterialRepository { get; private set; }
-        public IMaterialTypeRepository MaterialTypeRepository { get; private set; }
+        public ITypeRepository MaterialTypeRepository { get; private set; }
         public IReviewRepository ReviewRepository { get; private set; }
 
         public async Task<int> CompleteUnitAsync()
