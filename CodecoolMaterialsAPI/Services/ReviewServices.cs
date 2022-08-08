@@ -16,5 +16,11 @@
             List<Review> reviews = await _unitOfWork.ReviewRepository.GetAllAsync();
             return _mapper.Map<List<ReviewSimpleDTO>>(reviews);
         }
+
+        public async Task<ReviewDetailedDTO> GetSingleByIdAsync(int id)
+        {
+            Review review = await _unitOfWork.ReviewRepository.GetSingleByIdAsync(id);
+            return _mapper.Map<ReviewDetailedDTO>(review);
+        }
     }
 }

@@ -8,6 +8,10 @@ namespace CodecoolMaterialsAPI.MapperProfiles
             CreateMap<Review, ReviewSimpleDTO>()
                 .ForMember(dest => dest.Points,
                 opt => opt.MapFrom(src => $"{src.Points} / 10"));
+
+            CreateMap<Review, ReviewDetailedDTO>()
+                .ForMember(dest => dest.Points,
+                opt => opt.MapFrom(src => $"{src.Points} / 10"));
         }
     }
 }

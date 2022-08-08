@@ -16,5 +16,8 @@ namespace CodecoolMaterialsAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<List<ReviewSimpleDTO>>> GetAllAsync()
             => await _reviewServices.GetAllAsync();
+        [HttpGet("{id}")]
+        public async Task<ActionResult<ReviewDetailedDTO>> GetSingleByIdAsync(int id)
+            => await _reviewServices.GetSingleByIdAsync(id);
     }
 }

@@ -12,8 +12,6 @@
         public async Task<List<T>> GetAllAsync()
             => await _context.Set<T>().ToListAsync();
 
-        public async Task<T> GetSignleByIdAsync(int id)
-            => await _context.Set<T>().FindAsync(id);
 
         public async Task RemoveAsync(T entity)
             => await Task.Run(() => _context.Set<T>().Remove(entity));
