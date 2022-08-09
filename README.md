@@ -1,0 +1,1 @@
+Web API was created during Codecool academy. Its main porpuse is to store data about educational materials. Authorization is based on JWT and methods are Role restricted.
