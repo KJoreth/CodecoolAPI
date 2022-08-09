@@ -4,7 +4,7 @@
         <name>CodecoolMaterialsAPI</name>
     </assembly>
     <members>
-        <member name="M:CodecoolMaterialsAPI.Controllers.AdminController.CreateNewAsync(System.String,System.String)">
+        <member name="M:CodecoolMaterialsAPI.Controllers.AdminController.CreateNewAsync(CodecoolMaterialsAPI.DTOs.UserDTOs.UserAuthorizationDTO)">
             <summary>
             Creates new admin
             </summary>
@@ -72,7 +72,7 @@
             <responce code="404">If Author was not found</responce>
             <response code="500">If somethind went wrong</response>
         </member>
-        <member name="M:CodecoolMaterialsAPI.Controllers.LoginController.GetTokenAsync(System.String,System.String)">
+        <member name="M:CodecoolMaterialsAPI.Controllers.LoginController.GetTokenAsync(CodecoolMaterialsAPI.DTOs.UserDTOs.UserAuthorizationDTO)">
             <summary>
             Returns JWT
             </summary>

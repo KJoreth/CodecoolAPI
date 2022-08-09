@@ -33,11 +33,11 @@ namespace CodecoolMaterialsAPI.Controllers
         /// <response code="500">If somethind went wrong</response>
         [Produces(MediaTypeNames.Application.Json)]
         [Consumes(MediaTypeNames.Application.Json)]
-        [HttpGet]
+        [HttpPost]
         [AllowAnonymous]
-        public async Task<ActionResult> GetTokenAsync(string login, [FromBody] string password)
+        public async Task<ActionResult> GetTokenAsync(UserAuthorizationDTO model)
         {
-            var token = await _userServices.LoginAsync(login, password);
+            var token = await _userServices.LoginAsync(model.Login, model.Password);
             return Ok(token);
         }
     }

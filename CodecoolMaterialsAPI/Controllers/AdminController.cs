@@ -36,9 +36,9 @@ namespace CodecoolMaterialsAPI.Controllers
         [Consumes(MediaTypeNames.Application.Json)]
         [HttpPost]
         [Authorize(Roles = "Admin")]
-        public async Task<ActionResult<UserSimpleDTO>> CreateNewAsync(string login, [FromBody] string password)
+        public async Task<ActionResult<UserSimpleDTO>> CreateNewAsync(UserAuthorizationDTO model)
         {
-            var admin = await _adminServices.CreateNewAsync(login, password);
+            var admin = await _adminServices.CreateNewAsync(model.Login, model.Password);
             return Created($"{Request.Scheme}://{Request.Host}{Request.Path}/{admin.Id}",admin);
         }
 
