@@ -1,7 +1,4 @@
-﻿using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-
-namespace CodecoolMaterialsAPI.Services
+﻿namespace CodecoolMaterialsAPI.Services
 {
     public class UserServices : IUserServices
     {

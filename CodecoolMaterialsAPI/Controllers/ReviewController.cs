@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-
-namespace CodecoolMaterialsAPI.Controllers
+﻿namespace CodecoolMaterialsAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -19,7 +16,7 @@ namespace CodecoolMaterialsAPI.Controllers
         /// <returns>List of Revies</returns>
         /// <response code="200">If Revies were returned</response>
         /// <response code="401">If Unauthorized</response>
-        /// <response code="405">If not allowed</response>
+        /// <response code="403">If not allowed</response>
         /// <response code="500">If somethind went wrong</response>
         [Produces(MediaTypeNames.Application.Json)]
         [Consumes(MediaTypeNames.Application.Json)]
@@ -42,7 +39,7 @@ namespace CodecoolMaterialsAPI.Controllers
         /// </remarks>
         /// <response code="200">If Review was returned</response>
         /// <response code="401">If Unauthorized</response>
-        /// <response code="405">If not allowed</response>
+        /// <response code="403">If not allowed</response>
         /// <response code="404">If Review was not found</response>
         /// <response code="500">If somethind went wrong</response>
         [Produces(MediaTypeNames.Application.Json)]
@@ -68,7 +65,7 @@ namespace CodecoolMaterialsAPI.Controllers
         /// </remarks>
         /// <response code="201">If Review was created</response>
         /// <response code="401">If Unauthorized</response>
-        /// <response code="405">If not allowed</response>
+        /// <response code="403">If not allowed</response>
         /// <response code="404">If Material was not found</response>
         /// <response code="500">If somethind went wrong</response>
         [Produces(MediaTypeNames.Application.Json)]
@@ -96,7 +93,7 @@ namespace CodecoolMaterialsAPI.Controllers
         /// </remarks>
         /// <response code="204">If Review was updaterd</response>
         /// <response code="401">If Unauthorized</response>
-        /// <response code="405">If not allowed</response>
+        /// <response code="403">If not allowed</response>
         /// <response code="404">If Material or Review was not found</response>
         /// <response code="500">If somethind went wrong</response>
         [Produces(MediaTypeNames.Application.Json)]
@@ -115,7 +112,6 @@ namespace CodecoolMaterialsAPI.Controllers
         /// </summary>
         /// <remarks>
         /// Sample request:
-        /// 
         ///     Delete
         ///     {
         ///         "id" : "1"
@@ -123,7 +119,7 @@ namespace CodecoolMaterialsAPI.Controllers
         /// </remarks>
         /// <response code="202">If Review was deleted</response>
         /// <response code="401">If Unauthorized</response>
-        /// <response code="405">If not allowed</response>
+        /// <response code="403">If not allowed</response>
         /// <response code="404">If Review was not found</response>
         /// <response code="500">If somethind went wrong</response>
         [Produces(MediaTypeNames.Application.Json)]

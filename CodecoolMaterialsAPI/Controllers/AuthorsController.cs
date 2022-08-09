@@ -1,8 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-
-namespace CodecoolMaterialsAPI.Controllers
+﻿namespace CodecoolMaterialsAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -11,9 +7,8 @@ namespace CodecoolMaterialsAPI.Controllers
         private readonly IAuthorServices _authorServices;
 
         public AuthorsController(IAuthorServices authorServices)
-        {
-            _authorServices = authorServices;
-        }
+            => _authorServices = authorServices;
+
 
 
         /// <summary>
@@ -22,7 +17,7 @@ namespace CodecoolMaterialsAPI.Controllers
         /// <returns>List of Authors</returns>
         /// <response code="200">If Authors were returned</response>
         /// <response code="401">If Unauthorized</response>
-        /// <response code="405">If not allowed</response>
+        /// <response code="403">If not allowed</response>
         /// <response code="500">If somethind went wrong</response>
         [Produces(MediaTypeNames.Application.Json)]
         [Consumes(MediaTypeNames.Application.Json)]
@@ -46,7 +41,7 @@ namespace CodecoolMaterialsAPI.Controllers
         /// </remarks>
         /// <response code="200">If Author was returned</response>
         /// <response code="401">If Unauthorized</response>
-        /// <response code="405">If not allowed</response>
+        /// <response code="403">If not allowed</response>
         /// <responce code="404">If Author was not found</responce>
         /// <response code="500">If somethind went wrong</response>
         [Produces(MediaTypeNames.Application.Json)]
@@ -71,7 +66,7 @@ namespace CodecoolMaterialsAPI.Controllers
         /// </remarks>
         /// <response code="200">If Materials were returned</response>
         /// <response code="401">If Unauthorized</response>
-        /// <response code="405">If not allowed</response>
+        /// <response code="403">If not allowed</response>
         /// <responce code="404">If Author was not found</responce>
         /// <response code="500">If somethind went wrong</response>
         [HttpGet("{id}/Verified")]

@@ -1,5 +1,4 @@
-﻿
-namespace CodecoolMaterialsAPI.Security
+﻿namespace CodecoolMaterialsAPI.Security
 {
     public static class Hasher
     {

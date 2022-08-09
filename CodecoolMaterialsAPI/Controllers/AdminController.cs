@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-
-namespace CodecoolMaterialsAPI.Controllers
+﻿namespace CodecoolMaterialsAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -9,9 +6,7 @@ namespace CodecoolMaterialsAPI.Controllers
     {
         private readonly IAdminServices _adminServices;
         public AdminController(IAdminServices adminServices)
-        {
-            _adminServices = adminServices;
-        }
+         => _adminServices = adminServices;
 
 
         /// <summary>
@@ -29,7 +24,7 @@ namespace CodecoolMaterialsAPI.Controllers
         /// </remarks>
         /// <response code="201">If Admin was created</response>
         /// <response code="401">If Unauthorized</response>
-        /// <response code="405">If not allowed</response>
+        /// <response code="403">If not allowed</response>
         /// <response code="409">If Login is already taken</response>
         /// <response code="500">If somethind went wrong</response>
         [Produces(MediaTypeNames.Application.Json)]

@@ -1,9 +1,4 @@
-﻿
-
-
-using Microsoft.AspNetCore.Http;
-
-namespace CodecoolMaterialsAPI.Middlewares
+﻿namespace CodecoolMaterialsAPI.Middlewares
 {
     public class ErrorHandlingMiddleware : IMiddleware
     {

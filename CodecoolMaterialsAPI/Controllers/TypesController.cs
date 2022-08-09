@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-
-namespace CodecoolMaterialsAPI.Controllers
+﻿namespace CodecoolMaterialsAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -9,9 +6,7 @@ namespace CodecoolMaterialsAPI.Controllers
     {
         private readonly ITypeServices _typeServices;
         public TypesController(ITypeServices typeServices)
-        {
-            _typeServices = typeServices;
-        }
+            => _typeServices = typeServices;
 
 
         /// <summary>

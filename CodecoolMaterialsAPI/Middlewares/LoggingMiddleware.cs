@@ -1,5 +1,4 @@
-﻿
-namespace CodecoolMaterialsAPI.Middlewares
+﻿namespace CodecoolMaterialsAPI.Middlewares
 {
     public class LoggingMiddleware : IMiddleware
     {

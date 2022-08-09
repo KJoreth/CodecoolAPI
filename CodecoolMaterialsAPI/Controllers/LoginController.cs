@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-
-namespace CodecoolMaterialsAPI.Controllers
+﻿namespace CodecoolMaterialsAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -10,9 +7,7 @@ namespace CodecoolMaterialsAPI.Controllers
         private readonly IUserServices _userServices;
 
         public LoginController(IUserServices userServices)
-        {
-            _userServices = userServices;
-        }
+            => _userServices = userServices;
 
 
         /// <summary>

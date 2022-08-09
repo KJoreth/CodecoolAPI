@@ -1,6 +1,4 @@
-﻿using Microsoft.OpenApi.Models;
-using System.IO;
-using System.Reflection;
+﻿
 
 namespace CodecoolMaterialsAPI.Extensions
 {

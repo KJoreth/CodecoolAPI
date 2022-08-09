@@ -38,3 +38,8 @@ global using Microsoft.AspNetCore.Authorization;
 global using CodecoolMaterialsAPI.DTOs.UserDTOs;
 global using CodecoolMaterialsAPI.Data.Entities.Enums;
 global using System.Net.Mime;
+global using Microsoft.OpenApi.Models;
+global using System.IO;
+global using System.Reflection;
+global using System.IdentityModel.Tokens.Jwt;
+global using System.Security.Claims;

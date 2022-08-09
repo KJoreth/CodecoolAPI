@@ -1,6 +1,4 @@
-﻿using CodecoolMaterialsAPI.Services.Interfaces;
-
-namespace CodecoolMaterialsAPI.Services
+﻿namespace CodecoolMaterialsAPI.Services
 {
     public class MaterialServices : IMaterialServices
     {

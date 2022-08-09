@@ -1,6 +1,4 @@
-﻿
-
-namespace CodecoolMaterialsAPI.Controllers
+﻿namespace CodecoolMaterialsAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -8,9 +6,7 @@ namespace CodecoolMaterialsAPI.Controllers
     {
         private readonly IMaterialServices _materialServices;
         public MaterialsController(IMaterialServices materialServices)
-        {
-            _materialServices = materialServices;
-        }
+           => _materialServices = materialServices;
 
         /// <summary>
         /// Returns all Materials in a simplified form
@@ -18,7 +14,7 @@ namespace CodecoolMaterialsAPI.Controllers
         /// <returns>List of Materials</returns>
         /// <response code="200">If Materials were returned</response>
         /// <response code="401">If Unauthorized</response>
-        /// <response code="405">If not allowed</response>
+        /// <response code="403">If not allowed</response>
         /// <response code="500">If somethind went wrong</response>
         [HttpGet]
         [Produces(MediaTypeNames.Application.Json)]
@@ -41,7 +37,7 @@ namespace CodecoolMaterialsAPI.Controllers
         /// </remarks>
         /// <response code="200">If Material was returned</response>
         /// <response code="401">If Unauthorized</response>
-        /// <response code="405">If not allowed</response>
+        /// <response code="403">If not allowed</response>
         /// <response code="500">If somethind went wrong</response>
         [HttpGet("{id}")]
         [Produces(MediaTypeNames.Application.Json)]
@@ -68,7 +64,7 @@ namespace CodecoolMaterialsAPI.Controllers
         /// </remarks>
         /// <response code="201">If Material was created</response>
         /// <response code="401">If Unauthorized</response>
-        /// <response code="405">If not allowed</response>
+        /// <response code="403">If not allowed</response>
         /// <response code="404">If Author or Type was not found</response>
         /// <response code="409">If Material by this Titile already exists</response>
         /// <response code="500">If somethind went wrong</response>
@@ -99,7 +95,7 @@ namespace CodecoolMaterialsAPI.Controllers
         /// </remarks>
         /// <response code="204">If Material was updated</response>
         /// <response code="401">If Unauthorized</response>
-        /// <response code="405">If not allowed</response>
+        /// <response code="403">If not allowed</response>
         /// <response code="404">If Author, Type or Material was not found</response>
         /// <response code="409">If Material by this Titile already exists</response>
         /// <response code="500">If somethind went wrong</response>
@@ -126,7 +122,7 @@ namespace CodecoolMaterialsAPI.Controllers
         /// </remarks>
         /// <response code="202">If Material was created</response>
         /// <response code="401">If Unauthorized</response>
-        /// <response code="405">If not allowed</response>
+        /// <response code="403">If not allowed</response>
         /// <response code="404">If Material was not found</response>
         /// <response code="500">If somethind went wrong</response>
         [HttpDelete("{id}")]
