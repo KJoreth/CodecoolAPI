@@ -1,15 +1,13 @@
-
-
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+var connectionString = builder.Configuration["ConnectionStrings:DefaultConnection"];
 builder.Services.AddDAL();
 builder.Services.AddDb(connectionString);
 builder.Services.AddMiddlewares();
 builder.Services.AddServices();
 builder.Services.AddJsonPatch();
+
 
 var audience = builder.Configuration["Jwt:Audience"];
 var issuer = builder.Configuration["Jwt:Issuer"] ;

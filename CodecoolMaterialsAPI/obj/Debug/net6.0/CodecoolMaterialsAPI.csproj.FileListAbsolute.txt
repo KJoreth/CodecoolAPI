@@ -72,3 +72,4 @@ C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialsAPI\bin\Debug\net6.0\System.We
 C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialsAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialsAPI\bin\Debug\net6.0\CodecoolMaterialsAPI.xml
 C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialsAPI\obj\Debug\net6.0\CodecoolMaterialsAPI.xml
+C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialsAPI\bin\Debug\net6.0\Microsoft.Extensions.Configuration.UserSecrets.dll
