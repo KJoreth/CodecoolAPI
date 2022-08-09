@@ -1,6 +1,6 @@
 ﻿namespace CodecoolMaterialsAPI.DTOs.UserDTOs
 {
-    public class UserAuthorizationDTO
+    public record UserAuthorizationDTO
     {
         [Required]
         public string Login { get; set; }

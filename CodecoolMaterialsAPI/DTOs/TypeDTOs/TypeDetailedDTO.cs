@@ -1,6 +1,6 @@
 ﻿namespace CodecoolMaterialsAPI.DTOs.TypeDTOs
 {
-    public class TypeDetailedDTO
+    public record TypeDetailedDTO
     {
         public string Name { get; set; }
         public string Definition { get; set; }

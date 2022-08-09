@@ -1,7 +1,7 @@
 ﻿
 namespace CodecoolMaterialsAPI.DTOs.MaterialDTOs
 {
-    public class MaterialCreateUpdateDTO
+    public record MaterialCreateUpdateDTO
     {
         [Required]
         public string Title { get; set; }

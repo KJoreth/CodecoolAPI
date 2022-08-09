@@ -1,6 +1,6 @@
 ﻿namespace CodecoolMaterialsAPI.DTOs.UserDTOs
 {
-    public class UserSimpleDTO
+    public record UserSimpleDTO
     {
         public int Id { get; set; }
         public string Login { get; set; }

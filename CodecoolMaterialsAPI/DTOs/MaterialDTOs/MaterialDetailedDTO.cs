@@ -1,7 +1,7 @@
 ﻿
 namespace CodecoolMaterialsAPI.DTOs.MaterialDTOs
 {
-    public class MaterialDetailedDTO
+    public record MaterialDetailedDTO
     {
         public int Id { get; set; }
         public string Title { get; set; }
