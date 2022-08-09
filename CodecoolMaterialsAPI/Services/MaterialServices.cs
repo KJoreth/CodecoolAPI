@@ -31,6 +31,8 @@ namespace CodecoolMaterialsAPI.Services
                 throw new ResourceNotFoundException($"Author id: {model.AuthorId} doesn't exist");
             if (!await _unitOfWork.TypeRepository.AnyByIdAsync(model.TypeId))
                 throw new ResourceNotFoundException($"Type id: {model.TypeId} doesn't exist");
+            if (await _unitOfWork.MaterialRepository.AnyByTtileAsync(model.Title))
+                throw new ResourceAlreadyExistsException($"Material with title: {model.Title} already exists");
             Material material = _mapper.Map<Material>(model);
             await _unitOfWork.MaterialRepository.AddAsync(material);
             await _unitOfWork.CompleteUnitAsync();
@@ -45,6 +47,8 @@ namespace CodecoolMaterialsAPI.Services
                 throw new ResourceNotFoundException($"Type id: {model.TypeId} doesn't exist");
             if (!await _unitOfWork.MaterialRepository.AnyByIdAsync(id))
                 throw new ResourceNotFoundException($"Material id: {id} doesn't exist");
+            if (await _unitOfWork.MaterialRepository.AnyByTtileAsync(model.Title))
+                throw new ResourceAlreadyExistsException($"Material with title: {model.Title} already exists");
             Material material = await _unitOfWork.MaterialRepository.GetSingleWithAllFieldsByIdAsync(id);
             _mapper.Map(model, material);
             await _unitOfWork.CompleteUnitAsync();

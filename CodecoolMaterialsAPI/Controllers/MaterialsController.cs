@@ -13,15 +13,17 @@ namespace CodecoolMaterialsAPI.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin, User")]
         public async Task<ActionResult<List<MaterialSimpleDTO>>> GetAllAsync()
             => Ok(await _materialServices.GetAllAsync());
 
         [HttpGet("{id}")]
+        [Authorize(Roles = "Admin, User")]
         public async Task<ActionResult<MaterialDetailedDTO>> GetSingleByIdAsync(int id)
             => Ok(await _materialServices.GetSingleByIdAsync(id));
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<MaterialCreatedDTO>> CreateNewAsync(MaterialCreateUpdateDTO model)
         {
             MaterialCreatedDTO material = await _materialServices.CreateNewAsync(model);
@@ -29,6 +31,7 @@ namespace CodecoolMaterialsAPI.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> UpdateAsync(int id, MaterialCreateUpdateDTO model)
         {
             await _materialServices.UpdateAsync(id, model);
@@ -36,6 +39,7 @@ namespace CodecoolMaterialsAPI.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> DeleteAsync(int id)
         {
             await _materialServices.DeleteAsync(id);

@@ -26,18 +26,18 @@ namespace CodecoolMaterialsAPI.Middlewares
                 await context.Response.WriteAsJsonAsync(new { Error = e.Message });
 
             }
-            catch (RecordAlreadyExists e)
+            catch (ResourceAlreadyExistsException e)
             {
                 _logger.LogError(e, e.Message);
                 context.Response.StatusCode = 409;
                 await context.Response.WriteAsJsonAsync(new { Error = e.Message });
             }
-            //catch (Exception e)
-            //{
-            //    _logger.LogError(e, e.Message);
-            //    context.Response.StatusCode = 500;
-            //    await context.Response.WriteAsJsonAsync(new { Error = "Something went wrong" });
-            //}
+            catch (Exception e)
+            {
+                _logger.LogError(e, e.Message);
+                context.Response.StatusCode = 500;
+                await context.Response.WriteAsJsonAsync(new { Error = "Something went wrong" });
+            }
 
         }
     }

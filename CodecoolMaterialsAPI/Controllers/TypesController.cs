@@ -14,10 +14,12 @@ namespace CodecoolMaterialsAPI.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin, User")]
         public async Task<ActionResult<List<TypeSimpleDTO>>> GetAllAsync()
             => await _typeServices.GetAllAsync();
 
         [HttpGet("{id}")]
+        [Authorize(Roles = "Admin, User")]
         public async Task<ActionResult<TypeDetailedDTO>> GetSingleByIdAsync(int id)
             => await _typeServices.GetSingleByIdAsync(id);
 
