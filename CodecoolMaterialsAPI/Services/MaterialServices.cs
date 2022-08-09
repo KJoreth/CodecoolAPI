@@ -23,6 +23,12 @@
             return _mapper.Map<MaterialDetailedDTO>(material);
         }
 
+        public async Task<List<MaterialSimpleDTO>> GetAllByTypeAsync(int typeId)
+        {
+            List<Material> materials = await _unitOfWork.MaterialRepository.GetAllByTypeIdAsync(typeId);
+            return _mapper.Map<List<MaterialSimpleDTO>>(materials);
+        }
+
         public async Task<MaterialCreatedDTO> CreateNewAsync(MaterialCreateUpdateDTO model)
         {
             if (!await _unitOfWork.AuthorRepository.AnyByIdAsync(model.AuthorId))

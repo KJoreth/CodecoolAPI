@@ -6,6 +6,7 @@
 
         Task<bool> AnyByIdAsync(int id);
         Task<bool> AnyByTtileAsync(string title);
+        Task<List<Material>> GetAllByTypeIdAsync(int typeId);
         Task<Material> GetSingleAsNoTrackingByIdAsync(int id);
         Task<Material> GetSingleWithAllFieldsByIdAsync(int id);
     }

@@ -46,6 +46,31 @@
         public async Task<ActionResult<MaterialDetailedDTO>> GetSingleByIdAsync(int id)
             => Ok(await _materialServices.GetSingleByIdAsync(id));
 
+
+        /// <summary>
+        /// Returns list of materials with specyfic type
+        /// </summary>
+        /// <returns>List od materials</returns>
+        /// <remarks>
+        /// Sample request:
+        ///     
+        ///     Get
+        ///     {
+        ///         "typeId": "1"
+        ///     }
+        /// </remarks>
+        /// <response code="200">If Materials were returned</response>
+        /// <response code="401">If Unauthorized</response>
+        /// <response code="403">If not allowed</response>
+        /// <response code="404">If type was not found</response>
+        /// <response code="500">If somethind went wrong</response>
+        [HttpGet("typeFilter/{typeId}")]
+        [Produces(MediaTypeNames.Application.Json)]
+        [Consumes(MediaTypeNames.Application.Json)]
+        [Authorize(Roles = "Admin")]
+        public async Task<ActionResult<MaterialDetailedDTO>> GetListByTypeAsync(int typeId)
+            => Ok(await _materialServices.GetAllByTypeAsync(typeId));
+
         /// <summary>
         /// Creates new Material
         /// </summary>

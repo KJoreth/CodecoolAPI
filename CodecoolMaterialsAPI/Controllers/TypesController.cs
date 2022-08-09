@@ -15,7 +15,7 @@
         /// <returns>List of types</returns>
         /// <response code="200">If Types were returned</response>
         /// <response code="401">If Unauthorized</response>
-        /// <response code="405">If not allowed</response>
+        /// <response code="403">If not allowed</response>
         /// <response code="500">If somethind went wrong</response>
         [Produces(MediaTypeNames.Application.Json)]
         [Consumes(MediaTypeNames.Application.Json)]
@@ -39,7 +39,7 @@
         /// </remarks>
         /// <response code="200">If Types were returned</response>
         /// <response code="401">If Unauthorized</response>
-        /// <response code="405">If not allowed</response>
+        /// <response code="403">If not allowed</response>
         /// <response code="404">If Type was not found</response>
         /// <response code="500">If somethind went wrong</response>
         [Produces(MediaTypeNames.Application.Json)]

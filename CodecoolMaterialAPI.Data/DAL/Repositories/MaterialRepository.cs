@@ -19,6 +19,20 @@ namespace CodecoolMaterialsAPI.Data.DAL.Repositories
                 .FirstOrDefaultAsync();
         }
 
+
+        public async Task<List<Material>> GetAllByTypeIdAsync(int typeId)
+        {
+            if (!await APIContext.Types.Where(x => x.Id == typeId).AnyAsync())
+                throw new ResourceNotFoundException($"Type with id: {typeId} was not found");
+
+            return await APIContext.Materials
+                .Where(x => x.Type.Id == typeId)
+                .Include(x => x.Author)
+                .Include(x => x.Type)
+                .Include(x => x.Reviews)
+                .ToListAsync();
+        }
+
         public async Task<Material> GetSingleAsNoTrackingByIdAsync(int id)
         {
             if (!await AnyByIdAsync(id))
