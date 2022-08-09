@@ -15,11 +15,10 @@ namespace CodecoolMaterialsAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> GetTokenAsync(string login, string password)
+        [AllowAnonymous]
+        public async Task<ActionResult> GetTokenAsync(string login, [FromBody] string password)
         {
-            var hashedLogin = Hasher.ComputeSha256Hash(login);
-            var hashedPassword = Hasher.ComputeSha256Hash(password);
-            var token = await _userServices.LoginAsync(hashedLogin, hashedPassword);
+            var token = await _userServices.LoginAsync(login, password);
             return Ok(token);
         }
     }
