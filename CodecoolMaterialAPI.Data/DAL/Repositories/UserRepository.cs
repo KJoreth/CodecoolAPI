@@ -10,5 +10,10 @@
             => await APIContext.Users
                 .Where(x => x.Credentials.Login == hashedLogin && x.Credentials.Password == hashedPassword)
                 .FirstOrDefaultAsync();
+
+        public async Task<bool> AnyByLoginAsync(string hashedLogin)
+            => await APIContext.Users
+            .Where(x => x.Credentials.Login == hashedLogin)
+            .AnyAsync();
     }
 }

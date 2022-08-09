@@ -35,5 +35,7 @@ global using System.Text;
 global using System.Security.Cryptography;
 global using CodecoolMaterialsAPI.Security;
 global using Microsoft.AspNetCore.Authorization;
+global using CodecoolMaterialsAPI.DTOs.UserDTOs;
+global using CodecoolMaterialsAPI.Data.Entities.Enums;
 
 

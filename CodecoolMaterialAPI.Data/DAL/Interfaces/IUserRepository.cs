@@ -4,6 +4,7 @@
     {
         APIContext APIContext { get; }
 
+        Task<bool> AnyByLoginAsync(string hashedLogin);
         Task<User> GetUserByCredentialsAsync(string hashedLogin, string hashedPassword);
     }
 }

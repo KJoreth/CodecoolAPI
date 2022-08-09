@@ -35,6 +35,7 @@ namespace CodecoolMaterialsAPI.Extensions
             service.AddScoped<ITypeServices, TypeServices>();
             service.AddScoped<IReviewServices, ReviewServices>();
             service.AddScoped<IUserServices, UserServices>();
+            service.AddScoped<IAdminServices, AdminServices>();
         }
 
         public static void AddJsonPatch(this IServiceCollection service)
