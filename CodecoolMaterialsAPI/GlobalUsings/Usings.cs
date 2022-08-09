@@ -37,5 +37,4 @@ global using CodecoolMaterialsAPI.Security;
 global using Microsoft.AspNetCore.Authorization;
 global using CodecoolMaterialsAPI.DTOs.UserDTOs;
 global using CodecoolMaterialsAPI.Data.Entities.Enums;
-
-
+global using System.Net.Mime;

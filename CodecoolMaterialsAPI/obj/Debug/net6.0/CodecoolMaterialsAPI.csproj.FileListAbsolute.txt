@@ -73,3 +73,5 @@ C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialsAPI\bin\Debug\net6.0\Microsoft
 C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialsAPI\bin\Debug\net6.0\CodecoolMaterialsAPI.xml
 C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialsAPI\obj\Debug\net6.0\CodecoolMaterialsAPI.xml
 C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialsAPI\bin\Debug\net6.0\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialsAPI\bin\Debug\net6.0\System.Web.Cors.dll
+C:\Projects\CodecoolMaterialsAPI\CodecoolMaterialsAPI\bin\Debug\net6.0\System.Web.Http.Cors.dll

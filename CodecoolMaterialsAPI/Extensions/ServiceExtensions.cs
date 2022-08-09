@@ -103,5 +103,16 @@ namespace CodecoolMaterialsAPI.Extensions
             });
         }
 
+        public static void AddCorsWithAnyOrigin(this IServiceCollection service)
+        {
+            service.AddCors(options =>
+            {
+                options.AddDefaultPolicy(build =>
+                {
+                    build.AllowAnyOrigin();
+                });
+            });
+        }
+
     }
 }

@@ -4,5 +4,301 @@
         <name>CodecoolMaterialsAPI</name>
     </assembly>
     <members>
+        <member name="M:CodecoolMaterialsAPI.Controllers.AdminController.CreateNewAsync(System.String,System.String)">
+            <summary>
+            Creates new admin
+            </summary>
+            <returns>Created User</returns>
+            <remarks>
+            Sample request:
+            
+                Post
+                {
+                    "login" : "123"
+                    "password" : "123"
+                }
+            </remarks>
+            <response code="201">If Admin was created</response>
+            <response code="401">If Unauthorized</response>
+            <response code="405">If not allowed</response>
+            <response code="409">If Login is already taken</response>
+            <response code="500">If somethind went wrong</response>
+        </member>
+        <member name="M:CodecoolMaterialsAPI.Controllers.AuthorsController.GetAllAsync">
+            <summary>
+            Returns all Authors in a simplified form
+            </summary>
+            <returns>List of Authors</returns>
+            <response code="200">If Authors were returned</response>
+            <response code="401">If Unauthorized</response>
+            <response code="405">If not allowed</response>
+            <response code="500">If somethind went wrong</response>
+        </member>
+        <member name="M:CodecoolMaterialsAPI.Controllers.AuthorsController.GetSingleByIdAsync(System.Int32)">
+            <summary>
+            Returns an Author in a detailed form
+            </summary>
+            <returns>Author</returns>
+            <remarks>
+            Sample request:
+            
+                Get
+                {
+                    "id" : "1"
+                }
+            </remarks>
+            <response code="200">If Author was returned</response>
+            <response code="401">If Unauthorized</response>
+            <response code="405">If not allowed</response>
+            <responce code="404">If Author was not found</responce>
+            <response code="500">If somethind went wrong</response>
+        </member>
+        <member name="M:CodecoolMaterialsAPI.Controllers.AuthorsController.GetAllVerifiedMaterialsFromAuthor(System.Int32)">
+            <summary>
+            List of Author's Materials which score is above 5.0
+            </summary>
+            <returns>List of Materials</returns>
+            <remarks>
+            Sample request:
+            
+                Get
+                {
+                    "id" : "1"
+                }
+            </remarks>
+            <response code="200">If Materials were returned</response>
+            <response code="401">If Unauthorized</response>
+            <response code="405">If not allowed</response>
+            <responce code="404">If Author was not found</responce>
+            <response code="500">If somethind went wrong</response>
+        </member>
+        <member name="M:CodecoolMaterialsAPI.Controllers.LoginController.GetTokenAsync(System.String,System.String)">
+            <summary>
+            Returns JWT
+            </summary>
+            <returns>JWT</returns>
+            <remarks>
+            Sample request:
+            
+                Get
+                {
+                    "login" : "123"
+                    "password" : "123"
+                }
+            </remarks>
+            <response code="200">If JWT was returned</response>
+            <response code="404">If Credentials are incorect</response>
+            <response code="500">If somethind went wrong</response>
+        </member>
+        <member name="M:CodecoolMaterialsAPI.Controllers.MaterialsController.GetAllAsync">
+            <summary>
+            Returns all Materials in a simplified form
+            </summary>
+            <returns>List of Materials</returns>
+            <response code="200">If Materials were returned</response>
+            <response code="401">If Unauthorized</response>
+            <response code="405">If not allowed</response>
+            <response code="500">If somethind went wrong</response>
+        </member>
+        <member name="M:CodecoolMaterialsAPI.Controllers.MaterialsController.GetSingleByIdAsync(System.Int32)">
+            <summary>
+            Returns single Material in a detailed form
+            </summary>
+            <returns>Material</returns>
+            <remarks>
+            Sample request:
+                
+                Get
+                {
+                    "id": "1"
+                }
+            </remarks>
+            <response code="200">If Material was returned</response>
+            <response code="401">If Unauthorized</response>
+            <response code="405">If not allowed</response>
+            <response code="500">If somethind went wrong</response>
+        </member>
+        <member name="M:CodecoolMaterialsAPI.Controllers.MaterialsController.CreateNewAsync(CodecoolMaterialsAPI.DTOs.MaterialDTOs.MaterialCreateUpdateDTO)">
+            <summary>
+            Creates new Material
+            </summary>
+            <returns>Created material</returns>
+            <remarks>
+            Sample request:
+                
+                Post
+                {
+                    "title" : "c# for beginners"
+                    "location" : "library"
+                    "publishDate" : "2022-08-09"
+                    "authorId" : "1"
+                    "typeId" : "1"
+                }
+            </remarks>
+            <response code="201">If Material was created</response>
+            <response code="401">If Unauthorized</response>
+            <response code="405">If not allowed</response>
+            <response code="404">If Author or Type was not found</response>
+            <response code="409">If Material by this Titile already exists</response>
+            <response code="500">If somethind went wrong</response>
+        </member>
+        <member name="M:CodecoolMaterialsAPI.Controllers.MaterialsController.UpdateAsync(System.Int32,CodecoolMaterialsAPI.DTOs.MaterialDTOs.MaterialCreateUpdateDTO)">
+            <summary>
+            Updates Material
+            </summary>
+            <remarks>
+            Sample request:
+                
+                PUT
+                {
+                    "title" : "c# for beginners"
+                    "location" : "library"
+                    "publishDate" : "2022-08-09"
+                    "authorId" : "1"
+                    "typeId" : "1"
+                }
+            </remarks>
+            <response code="204">If Material was updated</response>
+            <response code="401">If Unauthorized</response>
+            <response code="405">If not allowed</response>
+            <response code="404">If Author, Type or Material was not found</response>
+            <response code="409">If Material by this Titile already exists</response>
+            <response code="500">If somethind went wrong</response>
+        </member>
+        <member name="M:CodecoolMaterialsAPI.Controllers.MaterialsController.DeleteAsync(System.Int32)">
+            <summary>
+            Deltes Material
+            </summary>
+            <remarks>
+            Sample request:
+                
+                Delete
+                {
+                    "id" : "1"
+                }
+            </remarks>
+            <response code="202">If Material was created</response>
+            <response code="401">If Unauthorized</response>
+            <response code="405">If not allowed</response>
+            <response code="404">If Material was not found</response>
+            <response code="500">If somethind went wrong</response>
+        </member>
+        <member name="M:CodecoolMaterialsAPI.Controllers.ReviewController.GetAllAsync">
+            <summary>
+            Returns all Revies in a simplified form
+            </summary>
+            <returns>List of Revies</returns>
+            <response code="200">If Revies were returned</response>
+            <response code="401">If Unauthorized</response>
+            <response code="405">If not allowed</response>
+            <response code="500">If somethind went wrong</response>
+        </member>
+        <member name="M:CodecoolMaterialsAPI.Controllers.ReviewController.GetSingleByIdAsync(System.Int32)">
+            <summary>
+            Returns Review in a detailed form
+            </summary>
+            <returns>Review</returns>
+            <remarks>
+            Sample request:
+            
+                Get
+                {
+                    "id" : "1"
+                }
+            </remarks>
+            <response code="200">If Review was returned</response>
+            <response code="401">If Unauthorized</response>
+            <response code="405">If not allowed</response>
+            <response code="404">If Review was not found</response>
+            <response code="500">If somethind went wrong</response>
+        </member>
+        <member name="M:CodecoolMaterialsAPI.Controllers.ReviewController.CreateNewAsync(CodecoolMaterialsAPI.DTOs.ReviewDTOs.ReviewCreateUpdateDTO)">
+            <summary>
+            Creates Review
+            </summary>
+            <returns>Created Review</returns>
+            <remarks>
+            Sample request:
+            
+                Post
+                {
+                    "points" : "10"
+                    "text" : "Amazing"
+                    "materialId" : "1"
+                }
+            </remarks>
+            <response code="201">If Review was created</response>
+            <response code="401">If Unauthorized</response>
+            <response code="405">If not allowed</response>
+            <response code="404">If Material was not found</response>
+            <response code="500">If somethind went wrong</response>
+        </member>
+        <member name="M:CodecoolMaterialsAPI.Controllers.ReviewController.UpdateAsync(System.Int32,CodecoolMaterialsAPI.DTOs.ReviewDTOs.ReviewCreateUpdateDTO)">
+            <summary>
+            Updates Review
+            </summary>
+            <remarks>
+            Sample request:
+            
+                Put
+                {
+                    "points" : "10"
+                    "text" : "Amazing"
+                    "materialId" : "1"
+                }
+            </remarks>
+            <response code="204">If Review was updaterd</response>
+            <response code="401">If Unauthorized</response>
+            <response code="405">If not allowed</response>
+            <response code="404">If Material or Review was not found</response>
+            <response code="500">If somethind went wrong</response>
+        </member>
+        <member name="M:CodecoolMaterialsAPI.Controllers.ReviewController.DeleteAsync(System.Int32)">
+            <summary>
+            Deltes Review
+            </summary>
+            <remarks>
+            Sample request:
+            
+                Delete
+                {
+                    "id" : "1"
+                }
+            </remarks>
+            <response code="202">If Review was deleted</response>
+            <response code="401">If Unauthorized</response>
+            <response code="405">If not allowed</response>
+            <response code="404">If Review was not found</response>
+            <response code="500">If somethind went wrong</response>
+        </member>
+        <member name="M:CodecoolMaterialsAPI.Controllers.TypesController.GetAllAsync">
+            <summary>
+            Returns all types in a simplified form
+            </summary>
+            <returns>List of types</returns>
+            <response code="200">If Types were returned</response>
+            <response code="401">If Unauthorized</response>
+            <response code="405">If not allowed</response>
+            <response code="500">If somethind went wrong</response>
+        </member>
+        <member name="M:CodecoolMaterialsAPI.Controllers.TypesController.GetSingleByIdAsync(System.Int32)">
+            <summary>
+            Returns a Type in a detailed form
+            </summary>
+            <returns>Type</returns>
+            <remarks>
+            Sample request:
+            
+                Get
+                {
+                    "id" : "1"
+                }
+            </remarks>
+            <response code="200">If Types were returned</response>
+            <response code="401">If Unauthorized</response>
+            <response code="405">If not allowed</response>
+            <response code="404">If Type was not found</response>
+            <response code="500">If somethind went wrong</response>
+        </member>
     </members>
 </doc>
